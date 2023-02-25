@@ -1,3 +1,14 @@
+@keyframes spawn {
+  from {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes like {
   0% {
     background-size: 0%;
@@ -62,6 +73,18 @@
   width: 100%;
   max-height: 320px;
   object-fit: cover;
+}
+
+section.first {
+  animation: spawn 2s;
+}
+
+section.second {
+  animation: spawn 4s;
+}
+
+section.third {
+  animation: spawn 6s;
 }
 
 .container {

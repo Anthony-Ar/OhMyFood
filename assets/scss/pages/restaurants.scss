@@ -8,6 +8,10 @@
     object-fit: cover;
 }
 
+section.first { animation: spawn 2s; }
+section.second { animation: spawn 4s; }
+section.third { animation: spawn 6s; }
+
 .container {
     background: #F7F7F7;
     margin: auto auto -55px auto;
