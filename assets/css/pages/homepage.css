@@ -46,6 +46,8 @@ section.working .grid-steps .steps {
   font-weight: 500;
 }
 section.working .grid-steps .steps i.step-icon {
+  width: 24px;
+  text-align: center;
   margin-right: 23px;
 }
 section.working .grid-steps .steps i.step-number {
@@ -131,6 +133,47 @@ section.restaurants .grid-restaurants article.card .card-content p {
 }
 section.restaurants .grid-restaurants article.card .card-content .like {
   text-align: right;
+}
+section.restaurants .grid-restaurants article.card .card-content .like .checked {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 0px;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+
+@media (min-width: 768px) {
+  .grid-steps, .grid-restaurants {
+    padding: 0 4em;
+  }
+  .grid-restaurants {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .grid-steps, .grid-restaurants {
+    padding: 0;
+  }
+  section.explore h2 {
+    font-size: 40px;
+  }
+  section.working {
+    padding: 2em 8em 4em;
+  }
+  section.working .grid-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  section.restaurants {
+    padding: 2em 0 4em 8em;
+    overflow: hidden;
+  }
+  section.restaurants .grid-restaurants {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  section.restaurants .grid-restaurants article.card {
+    width: 335px;
+    animation: restaurants 10s infinite linear;
+  }
 }
 
 /*# sourceMappingURL=homepage.css.map */

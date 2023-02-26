@@ -131,8 +131,46 @@ footer {
     li.with-icon {
         font-weight: 500;
 
-        .fa-utensils {
-            margin-right: 6px;
+        a {
+            display: flex;
+            align-items: center;
+        }
+
+        i {
+            @include m.flex-center;
+            width: 12px;
+            height: 13px;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    header {
+        height: 100px;
+
+        h1.logo-text {
+            font-size: 37px;
+        }
+    }
+
+    footer {
+        text-align: right;
+        padding: 2.5em 0 2em;
+
+        li {
+            display: inline-block;
+            margin-right: 40px;
+        }
+
+        li.title {
+            width: 140px;
+            text-align: left;
+            float: right;
+            position: relative;
+            right: 30px;
+            margin-left: 70px;
         }
     }
 }

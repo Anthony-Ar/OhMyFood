@@ -4,8 +4,15 @@
 
 .restaurant-bg {
     width: 100%;
-    max-height: 320px;
+    max-height: 275px;
     object-fit: cover;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        max-height: 275px;
+        object-fit: cover;
+    }
 }
 
 section.first { animation: spawn 2s; }
@@ -124,9 +131,34 @@ section.third { animation: spawn 6s; }
  
 }
 
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+    .restaurant-bg img {
+        max-height: 360px;
+    }
+}
+
 @media (min-width: 1200px) {
     .container {
-        max-width: 1024px;
-        padding: 2em 20em;
+        width: 80%;
+        max-width: 1400px;
+        padding: 2em 0;
+    }
+
+    section {
+        padding: 0 10em;
+    }
+
+    .restaurant-bg {
+        max-height: 360px;
+
+        img {
+            max-height: 1056px;
+            position: relative;
+            top: -269px;
+            aspect-ratio: 16/9;
+        }
     }
 }
