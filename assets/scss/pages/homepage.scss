@@ -162,8 +162,9 @@ section.restaurants {
 }
 
 @media (min-width: 768px) {
-    .grid-steps, .grid-restaurants {
-        padding: 0 4em;
+    section.working, section.restaurants {
+        padding-left: 4em;
+        padding-right: 4em;
     }
 
     .grid-restaurants {
@@ -172,32 +173,38 @@ section.restaurants {
 }
 
 @media (min-width: 1200px) {
-    .grid-steps, .grid-restaurants {
+    .grid-restaurants, section.restaurants h2, section.working {
+        max-width: 1024px;
+        margin: auto;
+    }
+
+    .grid-steps {
+        margin-top: 2em;
         padding: 0;
+    }
+
+    section.working {
+        padding: 2em 0 4em;
     }
 
     section.explore h2 {
         font-size: 40px;
     }
 
-    section.working {
-        padding: 2em 8em 4em;
-
-        .grid-steps {
-            grid-template-columns: repeat(3, 1fr);
-        }
+    section.working .grid-steps {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     section.restaurants {
-        padding: 2em 0 4em 8em;
         overflow: hidden;
 
         .grid-restaurants {
             grid-template-columns: repeat(4, 1fr);
+            margin-top: 2em;
 
             article.card {
                 width: 335px;
-                animation: restaurants 10s infinite linear;
+                animation: restaurants 10s infinite;
             }
         }
     }
