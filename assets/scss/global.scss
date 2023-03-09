@@ -1,0 +1,170 @@
+@use 'utils/variables' as v;
+@use 'utils/mixins' as m;
+@use 'utils/animations';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+h1 {
+    font-family: 'Shrikhand';
+    font-style: italic;
+    font-weight: normal;
+    font-size: 28px;
+}
+
+h3, h4 {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+button.gradient-button {
+    @include m.button;
+    background: linear-gradient(200.64deg, v.$primary -5.2%, v.$secondary 110.74%);
+    color: white;
+
+    &:hover {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, v.$primary -5.2%, v.$secondary 110.74%);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+        cursor: pointer;
+    }
+}
+
+button.xl {
+    padding: 1em 3em;
+}
+
+.like {
+    font-size: 21px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    color: transparent;
+
+    &:hover {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-stroke-width: 0px;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(200.64deg, v.$primary -5.2%, v.$secondary 110.74%);
+        animation-duration: 1s;
+        animation-name: like;
+    }
+}
+
+.loader {
+    @include m.flex-center;
+    color: v.$tertiary;
+    font-family: 'Shrikhand';
+    font-style: italic;
+    font-size: 30px;
+
+    position: fixed;
+    opacity: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-color: #353535;
+    animation: loader;
+    animation-duration: 3s;
+}
+
+header {
+    @include m.flex-center;
+    height: 63px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    position: relative;
+    z-index: 1;
+
+    h1.logo-text {
+        font-size: 30px;
+    }
+
+    a {
+        position: absolute;
+        left: 23px;
+    }
+}
+
+footer {
+    background: #353535;
+    padding: 2em 1.5em;
+
+    ul, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+        margin-bottom: .3em;
+        
+        a {
+            color: white;
+        }
+    }
+
+    li.title {
+        font-family: 'Shrikhand';
+        font-size: 18px;
+        font-style: italic;
+        color: white;
+        margin-bottom: 1em;
+    }
+
+    li.with-icon {
+        font-weight: 500;
+
+        a {
+            display: flex;
+            align-items: center;
+        }
+
+        i {
+            @include m.flex-center;
+            width: 12px;
+            height: 13px;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    header {
+        height: 100px;
+
+        h1.logo-text {
+            font-size: 37px;
+        }
+    }
+
+    footer {
+        text-align: right;
+        padding: 2.5em 0 2em;
+
+        li {
+            display: inline-block;
+            margin-right: 40px;
+        }
+
+        li.title {
+            width: 140px;
+            text-align: left;
+            float: right;
+            position: relative;
+            right: 30px;
+            margin-left: 70px;
+        }
+    }
+}

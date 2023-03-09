@@ -1,0 +1,81 @@
+@keyframes spawn {
+    from { opacity: 0; }
+    30% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes restaurants {
+    0% { transform: translate3d(0,0,0); }
+    10% { transform: translate3d(0,0,0); }
+    50% { transform: translate3d(-350px,0,0); }
+    60% { transform: translate3d(-350px,0,0); }
+    100% { transform: translate3d(0,0,0); }
+}
+
+@keyframes like {
+    0% { 
+        background-size: 0%;
+    }
+
+    100% {
+        background-size: 100%;
+    }
+}
+
+@keyframes loader {
+    from {
+        font-size: 0px;
+        z-index: 2;
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+        z-index: 2;
+    }
+    to {
+        display: none;
+        opacity: 0;
+        font-size: 60px;
+    }
+}
+
+@media (min-width: 768px) {
+    @keyframes loader {
+        from {
+            font-size: 20px;
+            z-index: 2;
+            opacity: 1;
+        }
+        80% {
+            opacity: 1;
+            z-index: 2;
+        }
+        to {
+            display: none;
+            opacity: 0;
+            font-size: 120px;
+        }
+    }
+}
+
+
+@media (min-width: 1200px) {
+    @keyframes loader {
+        from {
+            font-size: 30px;
+            z-index: 2;
+            opacity: 1;
+        }
+        80% {
+            opacity: 1;
+            z-index: 2;
+        }
+        to {
+            display: none;
+            opacity: 0;
+            font-size: 130px;
+        }
+    }
+}
+
+
