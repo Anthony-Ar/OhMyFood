@@ -176,10 +176,6 @@ section.restaurants .grid-restaurants article.card .card-content .like .checked 
     grid-template-columns: repeat(4, 1fr);
     margin-top: 2em;
   }
-  section.restaurants .grid-restaurants article.card {
-    width: 335px;
-    animation: restaurants 10s infinite;
-  }
 }
 
 /*# sourceMappingURL=homepage.css.map */
